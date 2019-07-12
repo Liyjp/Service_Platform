@@ -1,5 +1,3 @@
-# wzj_manager
-
 > A Vue.js project
 
 ## Build Setup
@@ -17,5 +15,13 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+后端管理系统是我写的：
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+项目分为前端和后端：
+前端登录：
+用户名：李新伟
+密码：123456
+
+后端登录：
+用户名：2016
+密码：123456
