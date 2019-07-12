@@ -1,0 +1,483 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--  <head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width,initial-scale=1.0">-->
+<!--    <title>xqq</title>-->
+<!--  </head>-->
+<!--  <body>-->
+<!--      <div id="app"></div>-->
+<!--    &lt;!&ndash; built files will be auto injected &ndash;&gt;-->
+<!--  </body>-->
+<!--</html>-->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>创新创业管理平台</title>
+  <link href="./static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+  <link href="./static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <script src="./static/js/jquery-1.8.3.min.js"></script>
+  <script src="./static/js/modernizr.custom.97074.js"></script>
+  <!---- start-smoth-scrolling---->
+  <script type="text/javascript" src="./static/js/move-top.js"></script>
+  <script type="text/javascript" src="./static/js/easing.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(".scroll").click(function(event){
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+      });
+    });
+  </script>
+  <!---End-smoth-scrolling---->
+  <!--script-->
+  <script src="./static/js/jquery.chocolat.js"></script>
+  <link rel="stylesheet" href="./static/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+  <!--light-box-files -->
+  <script type="text/javascript" charset="utf-8">
+    $(function() {
+      $('.gallery a').Chocolat();
+    });
+  </script>
+  <!--script-->
+
+</head>
+<body>
+<div class="header" id="home">
+  <div class="header-top">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><span>创新创业管理平台</span></a>
+      </div>
+      <script>
+        $("span.menu").click(function(){
+          $(".top-menu ul").slideToggle("slow" , function(){
+          });
+        });
+      </script>
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="top-menu">
+      <!--				<span class="menu"><img src="images/nav.png" alt=""/> </span>-->
+      <ul>
+        <li><a href="#home" class="active scroll">主页</a></li>
+        <li><a href="#aboutus" class="scroll">科研项目</a></li>
+        <li><a href="#services" class="scroll">政策法规</a></li>
+        <li><a href="#gallery" class="scroll">科技进展</a></li>
+        <li><a href="#team" class="scroll">科研成果</a></li>
+        <li><a href="#blog" class="scroll">学术新闻</a></li>
+        <li><a href="#contact" class="scroll">学校简介</a></li>
+        <li><a href="http://localhost:8080/#/">科创管理</a></li>
+        <li><a href="http://localhost:8080/#/">系统管理</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="header-zouma">
+    <div class="zouma">
+      <header>
+        <ul id="imgarea">
+          <li class="currimg"><img src="./static/aiqiyi_1/a2.jpg" alt=""></li>
+          <li><img src="./static/aiqiyi_1/a3.jpg" alt=""></li>
+          <li><img src="./static/aiqiyi_1/a4.jpg" alt=""></li>
+          <li><img src="./static/aiqiyi_1/a5.jpg" alt=""></li>
+          <li><img src="./static/aiqiyi_1/a6.jpg" alt=""></li>
+<!--          <li><img src="./static/aiqiyi_1/a5.jpg" alt=""></li>-->
+<!--          <li><img src="./static/aiqiyi_1/a6.jpg" alt=""></li>-->
+<!--          <li><img src="./static/aiqiyi_1/aiqiyi8.jpg" alt=""></li>-->
+<!--          <li><img src="./static/aiqiyi_1/aiqiyi9.jpg" alt=""></li>-->
+<!--          <li><img src="./static/aiqiyi_1/aiqiyi10.jpg" alt=""></li>-->
+        </ul>
+        <div class="zoumamenu">
+          <ul id="text" class="lala">
+            <li class="currtext"><a href="http://localhost:63342/wzj_manager/static/a1.html">微马达运动方向</a></li>
+            <li><a href="http://localhost:63342/wzj_manager/static/a2.html">美国化学会志</a></li>
+            <li><a href="http://localhost:63342/wzj_manager/static/a3.html">The moons far side</a></li>
+            <li><a href="http://localhost:63342/wzj_manager/static/a4.html">宿舍楼</a></li>
+            <li><a href="http://localhost:63342/wzj_manager/static/a5.html">八号教学楼</a></li>
+            <!--          <li><a href="#">常石磊放言重回上位区</a></li>-->
+            <!--          <li><a href="#">郑元畅张铭恩守玄沧</a></li>-->
+            <!--          <li><a href="#">无忧再次求容乐相嫁</a></li>-->
+            <!--          <li><a href="#">大都会女子图鉴</a></li>-->
+            <!--          <li><a href="#">真实战场揭秘</a></li>-->
+          </ul>
+        </div>
+      </header>
+      <script src="./static/jq.js"></script>
+      <script>
+        var item=0;
+        $("#text li").hover(function () {
+          item=$(this).index();
+          //console.log(item);
+          $(this).addClass('currtext').siblings().removeClass('currtext')
+          $("#imgarea li").eq(item).addClass('currimg').siblings().removeClass('currimg')
+          clearInterval(timer)
+        },function () {
+          timer=setInterval(autoplay,2000);
+        })
+        let autoplay =()=>{
+          $('#text li').eq(item).addClass('currtext').siblings().removeClass('currtext')
+          $("#imgarea li").eq(item).addClass('currimg').siblings().removeClass('currimg')
+          item++;
+          if(item==10){
+            item=0;
+          }
+        }
+        var timer=setInterval(autoplay,2000);
+      </script>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div class="about-section" id="aboutus">
+    <div class="container">
+      <h3>科研项目</h3>
+      <div class="about-grids">
+        <div class="col-md-4 about-grid">
+          <img src="./static/images/p1.jpg" class="img-responsive" alt="">
+          <h4><a href="http://localhost:63342/wzj_manager/static/b1.html">2016年度科研项目</a></h4>
+<!--          <h4>2016年度科研项目</h4>-->
+          <p> 2016年共组织申报国家及省部各类科研项目1726项，获批科研项811项</p>
+        </div>
+        <div class="col-md-4 about-grid">
+          <img src="./static/images/p2.jpg"  class="img-responsive" alt="">
+          <h4><a href="http://localhost:63342/wzj_manager/static/b2.html">我校承担国家重点研发计划项目</a></h4>
+<!--          <h4>我校承担国家重点研发计划项目</h4>-->
+          <p>2016-2018年我校承担国家重点研发计划项目、课题信息公开统计表</p>
+        </div>
+        <div class="col-md-4 about-grid">
+          <img src="./static/images/p3.jpg"  class="img-responsive" alt="">
+          <h4><a href="http://localhost:63342/wzj_manager/static/b3.html">项目简介</a></h4>
+<!--          <h4>项目简介</h4>-->
+          <p> 国家重点研发计划由原来的973计划、863计划、国家科技支撑计划、国际科技合作与交流专项、产业技术研究与开发基金和公益性行业科研专项等整合而成</p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <div class="services-section" id="services">
+    <div class="container">
+      <h3>政策法规</h3>
+      <div class="services-grids">
+        <div class="col-md-6 service-leftgrid">
+          <div class="service1">
+            <div class="left-grid1">
+              <span class="glyphicon glyphicon-glass" aria-hidden="true"></span>
+            </div>
+            <div class="left-grid2">
+              <h4><a href="http://localhost:63342/wzj_manager/static/c1.html">关于进一步弘扬科学家精神加强作风和学风建设的意见</a></h4>
+              <p>中共中央办公厅 国务院办公厅印发《关于进一步弘扬科学家精神加强作风和学风建设的意见》</p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="service2">
+            <div class="left-grid1">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            </div>
+            <div class="left-grid2">
+              <h4><a href="http://localhost:63342/wzj_manager/static/c2.html">高等学校人工智能创新行动计划</a></h4>
+              <p>人工智能的迅速发展将深刻改变人类社会生活、改变世界。为贯彻落实《国务院关于印发新一代人工智能发展规划的通知》</p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="service1">
+            <div class="left-grid1">
+              <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+            </div>
+            <div class="left-grid2">
+              <h4><a href="http://localhost:63342/wzj_manager/static/c3.html">关于进一步加强科研诚信建设的若干意见</a></h4>
+              <p>中共中央办公厅 国务院办公厅印发《关于进一步加强科研诚信建设的若干意见》</p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="col-md-6 service-rightgrid">
+          <div class="service1">
+            <div class="left-grid1">
+              <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>
+            </div>
+            <div class="left-grid2">
+              <h4><a href="http://localhost:63342/wzj_manager/static/c4.html">中共中央 国务院关于实施乡村振兴战略的意见</a></h4>
+              <p>实施乡村振兴战略，是党的十九大作出的重大决策部署，是决胜全面建成小康社会、全面建设社会主义现代化国家的重大历史任务，是新时代“三农”工作的总抓手。现就实施乡村振兴战略提出如下意见。</p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="service2">
+            <div class="left-grid1">
+              <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+            </div>
+            <div class="left-grid2">
+              <h4><a href="http://localhost:63342/wzj_manager/static/c5.html">科技部 财政部关于加强国家重点实验室建设发展的若干意见</a></h4>
+              <p>国家重点实验室是国家组织开展基础研究和应用基础研究、聚集和培养优秀科技人才、开展高水平学术交流、具备先进科研装备的重要科技创新基地，是国家创新体系的重要组成部分。</p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="service1">
+            <div class="left-grid1">
+              <span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
+            </div>
+            <div class="left-grid2">
+              <h4><a href="http://localhost:63342/wzj_manager/static/c6.html">国务院关于全面加强基础科学研究的若干意见</a></h4>
+              <p>强大的基础科学研究是建设世界科技强国的基石。</p>
+            </div>
+            <div class="clearfix"> </div>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+  <!--gallery-->
+  <div class="gallery" id="gallery">
+    <div class="container">
+      <h3>科技进展</h3>
+      <div class="gallery-grids">
+        <section>
+          <ul id="da-thumbs" class="da-thumbs">
+            <li>
+              <a href="./static/images/g1.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                <img src="./static/images/g1.jpg" alt="" />
+                <div>
+                  <h5>植物病理学年评》</h5>
+                  <span>植保学院孙广宇教授团队在《植物病理学年评》发表文章</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="./static/images/g2.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                <img src="./static/images/g2.jpg" alt="" />
+                <div>
+                  <h5>Science！</h5>
+                  <span>姜雨教授团队在国际顶尖期刊发表论文</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="./static/images/g3.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                <img src="./static/images/g3.jpg" alt="" />
+                <div>
+                  <h5>旱作农业高效用水理论与技术研究</h5>
+                  <span>我校在黄土高原半干旱区覆膜农田资源协同高效利用研究方面取得新进展</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="./static/images/g4.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                <img src="./static/images/g4.jpg" alt="" />
+                <div>
+                  <h5>有望创建新型植物真菌病害的生防因子</h5>
+                  <span>孙丽英教授团队再次在PNAS发表科研论文：有望创建新型植物真菌病害的生防因子</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="./static/images/g5.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                <img src="./static/images/g5.jpg" alt="" />
+                <div>
+                  <h5>张增强教授课题组在有机废物资源化研究方面取得新进展</h5>
+                  <span>我校资环学院张增强教授团队相关科研人员立足于团队现有研究成果，系统地梳理了国内外畜禽粪便资源化处理领域的相关科研进展</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="./static/images/g6.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                <img src="./static/images/g6.jpg" alt="" />
+                <div>
+                  <h5>小麦赤霉病发生过程中的分子识别和信号传导机制</h5>
+                  <span>植保学院许金荣教授团队解析小麦赤霉病发生过程中的分子识别和信号传导机制</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="./static/images/g7.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                <img src="./static/images/g7.jpg" alt="" />
+                <div>
+                  <h5>宿主因子OATP1A2参与禽HEV感染宿主细胞</h5>
+                  <span>我校动物重大疫病病原感染和致病机制研究团队在禽HEV与宿主细胞互作以及纳米抗体在动物疫病诊断领域取得新进展</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="./static/images/g8.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                <img src="./static/images/g8.jpg" alt="" />
+                <div>
+                  <h5>《Journal of Biological Chemistry》上发表重要研究成果</h5>
+                  <span>“动物生殖调控与繁殖障碍性疾病防控”团队在《Journal of Biological Chemistry》上发表重要研究成果</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="./static/images/g9.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                <img src="./static/images/g9.jpg" alt="" />
+                <div>
+                  <h5>动物多能性干细胞向生殖细胞诱导分化调控上取得新进展</h5>
+                  <span>我校动物干细胞研究与应用团队在动物多能性干细胞向生殖细胞诱导分化调控上取得新进展</span>
+                </div>
+              </a>
+            </li>
+            <div class="clearfix"> </div>
+          </ul>
+        </section>
+        <script type="text/javascript" src="./static/js/jquery.hoverdir.js"></script>
+        <script type="text/javascript">
+          $(function() {
+
+            $(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+  <!--//gallery-->
+  <!--team-->
+  <div class="team" id="team">
+    <div class="container">
+      <h3>科研成果</h3>
+      <div class="team-info">
+        <div class="col-md-3 team-grids">
+          <a href="http://localhost:63342/wzj_manager/static/e1.html">
+            <img class="img-responsive" src="./static/images/t1.jpg" alt="">
+            <div class="captn">
+              <h4>生物合成调控新通路</h4>
+              <p>赵天永教授团队发现玉米种子棉子糖生物合成调控新通路</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 team-grids">
+          <a href="http://localhost:63342/wzj_manager/static/e2.html">
+            <img class="img-responsive" src="./static/images/t2.jpg" alt="">
+            <div class="captn">
+              <h4>小麦耐热分子研究</h4>
+              <p>研究论文“Hybrid sequencing reveals insight into heat sensing and signaling of bread wheat”</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 team-grids">
+          <a href="http://localhost:63342/wzj_manager/static/e3.html">
+            <img class="img-responsive" src="./static/images/t3.jpg" alt="">
+            <div class="captn">
+              <h4>国家重点室3项成果</h4>
+              <p>豆科植物调节草地氮循环研究取得新进展</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3 team-grids">
+          <a href="http://localhost:63342/wzj_manager/static/e4.html">
+            <img class="img-responsive" src="./static/images/t4.jpg" alt="">
+            <div class="captn">
+              <h4>最新研究成果/h4>
+              <p>《Building and Environment》发表最新研究成果</p>
+            </div>
+          </a>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+  <!--//team-->
+
+  <!--start-blog-->
+  <div id="blog" class="blog-section">
+    <div class="container">
+      <h3>学术新闻</h3>
+      <div class="blog">
+        <div class="col-md-4 blog-text">
+          <h5>2019-03-11</h5>
+          <h4><a href='http://localhost:63342/wzj_manager/static/f1.html'>小麦种子萌发调控机制研究取得重要进展</a></h4>
+          <p>近日，植物科学领域国际著名期刊New Phytologist (IF=7.433)在线发表了我校生命科学学院/旱区作物逆境生物学国家重点实验室陈坤明教授团队和中国农业科学院作物科学研究所孙加强研究员团队合作研究的论文。</p>
+        </div>
+        <div class="col-md-8 welcome-img">
+          <a href="http://localhost:63342/wzj_manager/static/f1.html" class="mask"><img src="./static/images/b2.jpg" alt="image" class="img-responsive zoom-img"></a>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+      <div class="blog">
+        <div class="col-md-4 blog-text two">
+          <h5>2019-02-27</h5>
+          <h4><a href="http://localhost:63342/wzj_manager/static/f2.html">吴海明副教授发表最新研究成果</a></h4>
+          <p>近日，资源环境学院吴海明副教授在人工湿地可持续运行功能强化研究领域中取得重要研究进展。研究成果以《Exploring Utilization of Recycled Agricultural Biomass in Constructed Wetlands: Characterization of Driving Force for High-rate Nitrogen Removal》为题在线发表。</p>
+        </div>
+        <div class="col-md-8 blog-img two">
+          <a href="http://localhost:63342/wzj_manager/static/f2.html" class="mask"><img src="./static/images/b3.jpg" alt="image" class="img-responsive zoom-img"></a>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+      <div class="blog">
+        <div class="col-md-4 blog-text">
+          <h5>2019-01-20</h5>
+          <h4><a href="http://localhost:63342/wzj_manager/static/f3.html">农林有机固体废物热解制备生物炭及其环境应用方面取得进展</a></h4>
+          <p>高温缺氧热解技术作为一种高效的有机固体废物减量化、无害化和资源化的工程技术，在能源-环境-发展这一时代主题下日益受到广泛关注。</p>
+        </div>
+        <div class="col-md-8 welcome-img">
+          <a href="http://localhost:63342/wzj_manager/static/f3.html" class="mask"><img src="./static/images/b1.jpg" alt="image" class="img-responsive zoom-img"></a>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-header">
+        <h3>学校简介</h3>
+      </div>
+      <div class="contact-grid">
+        <div class="col-md-6 contactdetails-grid">
+          <h4>校徽</h4>
+          <div class="col-md-6 xiaohui-grids">
+            <a href="#">
+              <img class="img-responsive" src="./static/images/c1.jpg" alt="">
+              <div class="captn1">
+                <h4>校徽</h4>
+                <p>西北农林科技大学</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 contactdetails-grid1">
+          <div class="address">
+            <h4>地址</h4>
+            <p>陕西省杨凌国家农业高新技术产业示范区.西农路22号</p>
+            <p>咨询电话：　029－87091406、87091407、87091408、
+              87091409、87091410</p>
+            <p>邮　　编：　712100</p>
+            <p>E －mail： <a href="mailto:example@mail.com">zhaoshb@nwsuaf.edu.cn</a></p>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+    <div class="footer-section">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>CopyRight © 2010-2015 西北农林科技大学科学技术发展研究院 All Right Reserved<a href="" target="_blank" title=""></a><a href="" title="" target="_blank"></a></p>
+        </div>
+        <!--				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>-->
+        <a href="#" id="toTop" style="display: block;"></a>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      /*
+              var defaults = {
+                    containerID: 'toTop', // fading element id
+                  containerHoverID: 'toTopHover', // fading element hover id
+                  scrollSpeed: 1200,
+                  easingType: 'linear'
+               };
+              */
+
+      $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+  </script>
+</div>
+</body>
+</html>
