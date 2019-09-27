@@ -15,13 +15,13 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-后端管理系统是我写的：
 
-项目分为前端和后端：
-前端登录：
+
+项目分为学生端和老师端：
+学生端登录：
 用户名：李新伟
 密码：123456
 
-后端登录：
+老师端登录：
 用户名：2016
 密码：123456
